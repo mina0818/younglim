@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YR</title>
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="banner_box">
+        <button class="bottom_banner">
+            <span>리모델링 상담하기</span>
+        </button>
+    </div>
+        <header>
+            <div class="header_con">
+                <div class="inner">
+                    <div class="logo_area">
+                        <span class="blind">로고영역</span>
+                        <a href="" class="header_logo">
+                            <h1><span class="blind">로고</span></h1>
+                        </a>
+                    </div><!-- //logo_area -->
+
+                    <nav class="gnb_area">
+                        <span class="blind">메뉴영역</span>
+                        <ul class="gnb_list">
+                            <li class="gnb_item open_item" id="brand">
+                                <a href="">브랜드</a>
+                            </li>
+                            <li class="gnb_item open_item r_line" id="items">
+                                <a href="">제품</a>
+                            </li>
+                            <li class="gnb_item open_item" id="solu">
+                                <a href="">인테리어 솔루션</a>
+                            </li>
+                            <li class="gnb_item not">
+                                <a href="">매거진.Y</a>
+                            </li>
+                            <li class="gnb_item not">
+                                <a href="">쇼룸안내</a>
+                            </li>
+                        </ul>
+                    </nav><!-- //gnb_area -->
+
+                    <div class="utill_area">
+                        <span class="blind">유틸 영역</span>
+                        <ul>
+                            <li class="utill_item">
+                                <a href="">
+                                    <button class="srh_btn srh">
+                                        <span class="blind">검색</span>
+                                    </button>
+                                </a>
+                            </li>
+                            <li class="utill_item ">
+                                <a href="">
+                                    <button class="srh_btn like">
+                                        <span class="blind">위시리스트</span>
+                                    </button>
+                                </a>
+                            </li>
+                            <li class="utill_item ">
+                                <a href="">
+                                    <button class="srh_btn login">
+                                        <span class="blind">로그인</span>
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- //utill_area -->
+                </div>
+            </div><!-- //header_con -->
+
+            <div class="header_menu" >
+                <div class="gnb_menu">
+                    <div class="inner">
+                        <div class="left_wrap">
+                            <!-- 브랜드 -->
+                            <div class="visible_con brand_con">
+                                <div class="gnb_menu_title" >브랜드</div>
+                                <ul class="gnb_menu_list brand_show" >
+                                    <li class="gnb_menu_item"><a href="">Made in Younglim</a></li>
+                                    <li class="gnb_menu_item"><a href="">Life with Younglim</a></li>
+                                    <li class="gnb_menu_item"><a href="">Identity of Younglim</a></li>
+                                </ul>
+                            </div>
+                            <!-- 제품 -->
+                            <div class="visible_con items_con" >
+                                <div class="gnb_menu_title">제품</div>
+                                <ul class="gnb_menu_list border_none">
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">키친/붙박이장</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">키친 알아보기</li>
+                                            <li class="gnb_sub_item">키친 전체보기</li>
+                                            <li class="gnb_sub_item pl">프리미엄 키친</li>
+                                            <li class="gnb_sub_item pl">스탠다드 키친</li>
+                                            <li class="gnb_sub_item pl">키친 구성기기</li>
+                                            <li class="gnb_sub_item pl">키친 상판/하드웨어</li>
+                                            <li class="gnb_sub_item" id="margin">붙박이장 전체보기</li>
+                                            <li class="gnb_sub_item pl">여닫이 붙박이장</li>
+                                            <li class="gnb_sub_item pl">슬라이딩 붙박이장</li>
+                                            <li class="gnb_sub_item pl">드레스룸</li>
+                                            <li class="gnb_sub_item pl">현관장</li>
+                                            <li class="gnb_sub_item pl bottom_box">모듈수납장</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">바스/타일</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">바스 알아보기</li>
+                                            <li class="gnb_sub_item">바스 전체보기</li>
+                                            <li class="gnb_sub_item pl">프리미엄 바스</li>
+                                            <li class="gnb_sub_item pl">스탠다드 바스</li>
+                                            <li class="gnb_sub_item pl">바스 구성기기</li>
+                                            <li class="gnb_sub_item pl">타일</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">도어</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">도어 알아보기</li>
+                                            <li class="gnb_sub_item">아펠도어</li>
+                                            <li class="gnb_sub_item">도어</li>
+                                            <li class="gnb_sub_item">멤브레인 도어</li>
+                                            <li class="gnb_sub_item">타공도어</li>
+                                            <li class="gnb_sub_item">키즈도어</li>
+                                            <li class="gnb_sub_item">기능성 도어</li>
+                                            <li class="gnb_sub_item">하드웨어</li>
+                                            <li class="gnb_sub_item">도어 시스템</li>
+                                            <li class="gnb_sub_item bottom_box">도어 프레임</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">중문</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">중문 알아보기</li>
+                                            <li class="gnb_sub_item">3연동 중문</li>
+                                            <li class="gnb_sub_item">양개 중문</li>
+                                            <li class="gnb_sub_item">슬림 알루미늄 중문</li>
+                                            <li class="gnb_sub_item">기타 중문</li>
+                                            <li class="gnb_sub_item">폴딩도어</li>
+                                            <li class="gnb_sub_item">파티션</li>
+                                            <li class="gnb_sub_item">유리옵션</li>
+                                            <li class="gnb_sub_item">중문 시스템</li>
+                                            <li class="gnb_sub_item bottom_box">중문 프레임</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">창호</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">창호 알아보기</li>
+                                            <li class="gnb_sub_item">창호 전체보기</li>
+                                            <li class="gnb_sub_item">발코니창</li>
+                                            <li class="gnb_sub_item">베이직창</li>
+                                            <li class="gnb_sub_item">시스템창</li>
+                                            <li class="gnb_sub_item">입면분할창</li>
+                                            <li class="gnb_sub_item">프로젝트창</li>
+                                            <li class="gnb_sub_item">발코니창</li>
+                                            <li class="gnb_sub_item">학교창</li>
+                                            <li class="gnb_sub_item bottom_box">하드웨어</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">몰딩/월/마루</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">몰딩/월/마루 알아보기</li>
+                                            <li class="gnb_sub_item">몰딩</li>
+                                            <li class="gnb_sub_item">스타일월</li>
+                                            <li class="gnb_sub_item">월판넬</li>
+                                            <li class="gnb_sub_item">벽장식</li>
+                                            <li class="gnb_sub_item">마루</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                    <li class="gnb_menu_item">
+                                        <a href="" class="icon">인테리어필름</a>
+                                        <ul class="gnb_sub">
+                                            <li class="gnb_sub_item">인테리어필름&시트</li>
+                                        </ul>
+                                    </li><!-- //gnb_menu_item -->
+                                </ul>
+                            </div>
+                            <!-- 인테리어 솔루션 -->
+                            <div class="visible_con solu_con" >
+                                <div class="gnb_menu_title">인테리어 솔루션</div>
+                                <ul class="gnb_menu_list">
+                                    <li class="gnb_menu_item"><a href="">인테리어 시작하기</a></li>
+                                    <li class="gnb_menu_item"><a href="">인테리어 스타일 제안</a></li>
+                                    <li class="gnb_menu_item"><a href="">리모델링 사례</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- //left_wrap -->
+
+                        <div class="right_wrap">
+                            <div class="gnb_slide">
+                                <div class="swiper gnb_swiper">
+                                    <div class="swiper-wrapper gnb_swiper_wrap">
+                                        <span class="blind">이벤트 슬라이드 영역</span>
+                                    <div class="swiper-slide gnb_swiper_slide">
+                                        <a href="">
+                                            <span class="blind">영림프라임샤시 무료 상담 이벤트</span>
+                                            <img src="images/gnb_slider1.jpg" alt="">
+                                            <div class="txt">
+                                                <span>NEW</span>
+                                                무료 상담 이벤트
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide gnb_swiper_slide">
+                                        <a href="">
+                                            <span class="blind">상담받고 선물받고</span>
+                                            <img src="images/gnb_slider2.jpg" alt="">
+                                            <div class="txt">
+                                                <span>NEW</span>
+                                                선물 이벤트 증정
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide gnb_swiper_slide">
+                                        <a href="">
+                                            <span class="blind">대리점 개설 문의</span>
+                                            <img src="images/gnb_slider3.jpg" alt="">
+                                            <div class="txt">
+                                                <span>NEW</span>
+                                                대리점 개설 문의
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    </div>
+                                    <div class="btn_area next"></div>
+                                    <div class="btn_area prev"></div>
+                                </div>
+                                    <div class="swiper-pagination gnb_pagination"></div>
+                            </div><!-- //gnb_slide -->
+
+                            <div class="recom_area">
+                                <div class="cate">
+                                    <a href="" class="arrow">
+                                        e카탈로그
+                                    </a>
+                                </div>
+                                <div class="cate">
+                                    <a href="" class="arrow">
+                                        최근 본 제품
+                                    </a>
+
+                                    <a href="" class="recom_img">
+                                        <p>
+                                            당신에게 꼭 맞는 스타일을 추천해 드립니다.
+                                        </p>
+                                        <img src="images/gnb-recommend-illust.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- //inner -->
+                </div><!-- //gnb_menu -->
+
+                <div class="srh_area">
+                    <div class="srh_inner">
+                        <div class="srh_title">SEARCH</div>
+                        <div class="srh_box">
+                            <form action="" method="get">
+                                <input type="text" name="" placeholder="검색어를 입력해주세요">
+                            </form>
+                            <div class="srh_keyword">
+                                <span>추천 키워드</span>
+                                <ul>
+                                    <li><a href="">이벤트</a></li>
+                                    <li><a href="">2021</a></li>
+                                    <li><a href="">슬로우위켄드</a></li>
+                                    <li><a href="">펫도어</a></li>
+                                    <li><a href="">데메테르</a></li>
+                                </ul>
+                            </div><!-- //srh_keyword -->
+                        </div>
+                    </div>
+                </div><!-- //srh_area -->
+            </div><!-- //header_menu -->
+        </header>
+
+        <main>
+            <span class="cursor"></span>
+
+
+            <div class="main_slider">
+                <div class="swiper main_swiper">
+                    <div class="swiper-wrapper main_swiper_wrap">
+
+                      <div class="swiper-slide main_swiper_slide">
+                            <div class="img_wrap window">
+                                <div class="txt_box">
+                                    <div class="up_box">
+                                        <h3 class="up1">영림프라임샤시,창호</h3>
+                                    </div>
+                                    <div class="up_box">
+                                        <p  class="up2">뛰어난 단열과 기밀성으로 더 포근하고 아늑한 창</p>
+                                    </div>
+                                    <div class="up_box">
+                                        <p  class="up2">영림프라임샤시 좋은 창호의 기준이 됩니다.</p>
+                                    </div>
+                                    <div class="up3">
+                                        <div class="more_btn">
+                                        <span class="blind">더보기</span>
+                                        <a href="">MORE</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                      </div><!-- //main_swiper_slide -->
+
+                      <div class="swiper-slide main_swiper_slide">
+                            <div class="img_wrap kichen">
+                                <div class="txt_box">
+                                    <h3>TVCF 속 키친</h3>
+                                    <p>비스포크 냉장고와 동일한 패널 소재를 사용한 TV CF 속</p>
+                                    <p>손예진 주방을 만나보세요.</p>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기</span>
+                                        <a href="">MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                      </div><!-- //main_swiper_slide -->
+
+                      <div class="swiper-slide main_swiper_slide">
+                            <div class="img_wrap event">
+                                <div class="txt_box">
+                                    <h3>이벤트 참여하기</h3>
+                                    <p>무료 실측 상담만 받아도 선물을 드립니다. 쉽고 빠른 1:1 맞춤</p>
+                                    <p>인테리어 상담, 영림과 함께 시작해보세요.</p>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기</span>
+                                        <a href="">MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                      </div><!-- //main_swiper_slide -->
+
+                      <div class="swiper-slide main_swiper_slide">
+                            <div class="img_wrap door">
+                                <div class="txt_box">
+                                    <h3>프리미엄 도어, 아펠</h3>
+                                    <p>영림도어의 오랜 기술력과 내공을 담았습니다. 최고급</p>
+                                    <p>소재와 하드웨어, 차별화된 디자인으로 선보이는 아펠도어</p>
+                                    <p>만나보세요.</p>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기</span>
+                                        <a href="">MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                      </div><!-- //main_swiper_slide -->
+
+                      <div class="swiper-slide main_swiper_slide">
+                            <div class="img_wrap style">
+                                <div class="txt_box">
+                                    <h3>인테리어 스타일 제안</h3>
+                                    <p>디자이너가 제안하는 스타일컬렉션부터 다양한 사람들의</p>
+                                    <p>리모델링 스토리까지, 나에게 영감을 불어넣어줄 다채로운</p>
+                                    <p>공간을 만나보세요</p>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기</span>
+                                        <a href="">MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                      </div><!-- //main_swiper_slide -->
+
+                    </div><!-- //main_swiper_wrap -->
+                    <div class="btn_area next"></div>
+                    <div class="btn_area prev"></div>
+                    <div class="scroll">
+                        <div class="scroll_bar">
+                            <div class="scroll_line"></div>
+                        </div>
+                        <span>Scroll</span>
+                    </div>
+                </div><!-- //main_swiper -->
+            </div><!-- //main_slider -->
+
+            <div class="list_slider">
+                <div class="txt_area">
+                    <p>
+                        다양한 라이프스타일 속에서 최적화된 당신의 주거 공간을 디자인합니다. <br>
+                        가치 있는 당신의 일상을 위한 취향에 딱 맞는 인테리어 디자인을 만나보세요.
+                    </p>
+                    <span>
+                        Lifestyle design beyond material
+                    </span>
+                </div>
+
+                <div class="swiper list_swiper">
+                    <div class="point_arrow"></div>
+
+                    <div class="swiper-wrapper list_swiper_wrap">
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-kitchen.jpg" alt="">
+                                    <div class="txt">
+                                        <p>키친</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-bath.jpg" alt="">
+                                    <div class="txt">
+                                        <p>바스</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-door.jpg" alt="">
+                                    <div class="txt">
+                                        <p>도어</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-interlocking-door.jpg" alt="">
+                                    <div class="txt">
+                                        <p>중문</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-window.jpg" alt="">
+                                    <div class="txt">
+                                        <p>창호</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-wall-finish.jpg" alt="">
+                                    <div class="txt">
+                                        <p>몰딩/월/마루</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-color.jpg" alt="">
+                                    <div class="txt">
+                                        <p>인테리어 필름</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                        <div class="swiper-slide list_swiper_slide">
+                            <div class="img_wrap">
+                                <a href="">
+                                    <img src="images/main-1-img-built-in.jpg" alt="">
+                                    <div class="txt">
+                                        <p>붙박이장</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- //list_swiper_slide -->
+                    </div>
+                </div><!-- //list_swiper -->
+            </div><!-- //list_slider -->
+
+            <div class="tab_menu">
+                <span class="blind">컨샙 메뉴영역</span>
+                <div class="tab_nav inner">
+                    <ul>
+                        <li class="active"><a href="#modern">Modern</a></li>
+                        <li><a href="#natural">Natural</a></li>
+                        <li><a href="#classic">Classic</a></li>
+                        <li><a href="#unique">Unique</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab_con_area">
+                    <div class="group group1 active" id="modern">
+                        <div class="cont">
+                            <div class="big_txt motion_back motion_show">
+                                <span>
+                                    Mordern
+                                </span>
+                            </div>
+                            <div class="box box_1 motion">
+                                <a href="">
+                                    <span class="blind">모던 거실 이미지</span>
+                                    <img src="images/main-2-img-modern-1.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Livingroom
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_2 motion">
+                                <a href="">
+                                    <span class="blind">모던 거실 문 이미지</span>
+                                    <img src="images/main-2-img-modern-2.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Enterance
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_3 motion">
+                                <a href="">
+                                    <span class="blind">모던 거실 이미지</span>
+                                    <img src="images/main-2-img-modern-3.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Livingroom
+                                </div>
+                                <div class="bottom_txt">
+                                    <p>
+                                        원룸부터 고급주택까지 다양한 형태의 주거공간에 모두 잘 어울리는 모던 스타일을 만나보세요. <br> 
+                                        꼭 필요한 물건들만 채워 공간에 여백을 주고 간결한 선과 면으로 다듬어진 깔끔한 인테리어를 <br>
+                                        선보입니다.
+                                    </p>
+
+                                    <span>
+                                        Mordern
+                                    </span>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기 버튼</span>
+                                        <a href="">
+                                            인테리어 스타일 제안
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- //box_1 -->
+
+                        </div><!-- //cont -->
+                    </div><!-- //mordern -->
+
+                    <div class="group group2" id="natural">
+                        <div class="cont">
+                            <div class="big_txt motion">
+                                <span>
+                                    Natural
+                                </span>
+                            </div>
+                            <div class="box box_1 motion">
+                                <a href="">
+                                    <span class="blind">네츄럴 욕실 이미지</span>
+                                    <img src="images/main-2-img-nature-1.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Bedroom
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_2 motion">
+                                <a href="">
+                                    <span class="blind">네츄럴 욕실 이미지</span>
+                                    <img src="images/main-2-img-nature-2.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Bedroom
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_3 motion">
+                                <a href="">
+                                    <span class="blind">네츄럴 거실 이미지</span>
+                                    <img src="images/main-2-img-nature-3.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Livingroom
+                                </div>
+                                <div class="bottom_txt">
+                                    <p>
+
+                                        진정한 아름다움은 자연스러움에서 시작됩니다. 자연에서 얻은 소재와 색감은 공간에 <br>
+                                        담담하면서도 활발한 에너지를 더해주며 오래도록 질리지 않는 편안하고 안락한 공간을 <br>
+                                        완성해줍니다.
+                                    </p>
+
+                                    <span>
+                                        Natural
+                                    </span>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기 버튼</span>
+                                        <a href="">
+                                            인테리어 스타일 제안
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- //box_1 -->
+
+                        </div><!-- //cont -->
+                    </div><!-- //natural -->
+
+                    <div class="group group3" id="classic">
+                        <div class="cont">
+                            <div class="big_txt motion">
+                                <span>
+                                    Classic
+                                </span>
+                            </div>
+                            <div class="box box_1 motion">
+                                <a href="">
+                                    <span class="blind">클래식 거실 이미지</span>
+                                    <img src="images/main-2-img-classic-1.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Livingroom
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_2 motion">
+                                <a href="">
+                                    <span class="blind">클래식 주방 이미지</span>
+                                    <img src="images/main-2-img-classic-2.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Kitchen
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_3 motion">
+                                <a href="">
+                                    <span class="blind">클래식 침실 이미지</span>
+                                    <img src="images/main-2-img-classic-3.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    Bedroom
+                                </div>
+                                <div class="bottom_txt">
+                                    <p>
+                                        과하지 않은 화려함으로 절제된 아름다움을 보여주는 클래식 스타일은 적절하게 가미된 장식적 <br>
+                                        요소와 우아한 곡선 포인트로 공간에 격식과 품격을 더해줍니다.
+                                    </p>
+
+                                    <span>
+                                        Classic
+                                    </span>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기 버튼</span>
+                                        <a href="">
+                                            인테리어 스타일 제안
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- //box_1 -->
+
+                        </div><!-- //cont -->
+                    </div><!-- //classic -->
+
+                    <div class="group group4" id="unique">
+                        <div class="cont">
+                            <div class="big_txt motion">
+                                <span>
+                                    Unique
+                                </span>
+                            </div>
+                            <div class="box box_1 motion">
+                                <a href="">
+                                    <span class="blind">유니크 침실 이미지</span>
+                                    <img src="images/main-2-img-unique-1.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    <span>Bedroom</span>
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_2 motion">
+                                <a href="">
+                                    <span class="blind">유니크 드레스룸 이미지</span>
+                                    <img src="images/main-2-img-unique-2.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    <span>Dressroom</span>
+                                </div>
+                            </div><!-- //box_1 -->
+                            <div class="box box_3 motion">
+                                <a href="">
+                                    <span class="blind">유니크 거실 이미지</span>
+                                    <img src="images/main-2-img-unique-3.jpg" alt="">
+                                </a>
+                                <div class="side_txt">
+                                    <span>Monochrome Photograph</span>
+                                    <span>Livingroom</span>
+                                </div>
+                                <div class="bottom_txt">
+                                    <p>
+                                        나만의 개성과 취향을 듬뿍 담아 집안 구석구석 생동감 넘치는 아이템들로 완성한 유니크 <br>
+                                        스타일은 지루하고 나른한 일상에 새로움을 선사합니다. 톡톡 튀는 컬러와 다양한 소재의 <br>
+                                        믹스매치로 완성된 독창적인 공간을 만나보세요. 
+                                    </p>
+
+                                    <span>
+                                        Unique
+                                    </span>
+                                    <div class="more_btn">
+                                        <span class="blind">더보기 버튼</span>
+                                        <a href="">
+                                            인테리어 스타일 제안
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- //box_1 -->
+
+                        </div><!-- //cont -->
+                    </div><!-- //unique -->
+                </div><!-- //tab_con_area -->
+            </div><!-- //tab_menu -->
+
+            <div class="video_area">
+                <div class="wrap">
+                    
+                    <div class="txt_con">
+                        <h3>Made in Younglim</h3>
+                        <p>
+                            영림은 원자재 입고부터 생산, 조립, 납품, 서비스까지 한 번에 진행하는   <br>                      
+                            원스톱 생산공정 시스템을통해 품질을 철저히 관리하고 있습니다.
+                        </p>
+                    </div>
+                    <div class="more_btn">
+                        <a href="">더 보러가기</a>
+                    </div>
+                    <div class="video_wrap">
+                        <div class="video_box">
+                            <iframe width="1024" height="578" src="https://www.youtube.com/embed/L3GplJfWC-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="videocover">
+                                <img src="images/main-img-play.jpg" alt="영림 생산공정 시스템" class="cover_img">
+                                <a href="" class="play_btn">
+                                    <span class="blind">동영상 재생 버튼</span>
+                                </a>
+                            </div>
+                        </div><!-- //video_box -->
+                    </div>
+                </div>
+            </div><!-- //video_area -->
+
+            <div class="product_area">
+                <div class="inner">
+                    <div class="txt_area">
+                        <h3>Product Category</h3>
+                    </div>
+                    <div class="icon_area">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-01.jpg" alt="">
+                                    <p>키친</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-02.jpg" alt="">
+                                    <p>바스</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-03.jpg" alt="">
+                                    <p>도어</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-04.jpg" alt="">
+                                    <p>중문</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-05.jpg" alt="">
+                                    <p>창호</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-06.jpg" alt="">
+                                    <p>몰딩/월/마루</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-07.jpg" alt="">
+                                    <p>인테리어 필름</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/main-icon-product-08.jpg" alt="">
+                                    <p>붙박이장</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- //icon_area -->
+                </div>
+            </div><!-- //product_area -->
+
+            <div class="designer_pick">
+
+                <span class="blind">디자이너 Pick</span>
+                <div class="inner">
+                    <div class="top_area">
+                        <h3>디자이너 Pick</h3>
+                        <div class="pick_nav">
+                            <div class="swiper-pagination designer_nav"></div>
+                        </div>
+                    </div>
+                    <div class="swiper designer_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide designer_slide kichen">
+                                <div class="cont_area left_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/kichen1.png" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/kichen2.png" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href=""  class="por_box">
+                                        <img src="images/kichen3.jpg" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+
+                          <div class="swiper-slide designer_slide bath">
+                                <div class="cont_area left_area">
+                                    <a href="" class=" por_box">
+                                        <img src="images/bath1.png" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/bath2.png" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/bath3.png" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+
+                          <div class="swiper-slide designer_slide door">
+                                <div class="cont_area left_area">
+                                    <a href="" class=" por_box">
+                                        <img src="images/door1.png" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/door2.png" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/door3.png" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+                          <div class="swiper-slide designer_slide middle">
+                                <div class="cont_area left_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/middle1.png" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/middle2.png" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/middle3.png" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+                          <div class="swiper-slide designer_slide window">
+                                <div class="cont_area left_area">
+                                    <a href="" class=" por_box">
+                                        <img src="images/window1.jpg" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href="" class="top por_box">
+                                        <img src="images/window2.jpg" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/window3.jpg" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+                          <div class="swiper-slide designer_slide moll">
+                                <div class="cont_area left_area">
+                                    <a href="" class=" por_box">
+                                        <img src="images/moll1.png" alt="">
+                                        <p>프레임 Frame Stone Gray</p>
+                                    </a>
+                                </div>
+                                <div class="cont_area right_area">
+                                    <a href="" class=" por_box">
+                                        <img src="images/moll2.jpg" alt="">
+                                        <p>엣지45 Edge45</p>
+                                    </a>
+                                    <a href="" class="bottom por_box">
+                                        <img src="images/moll3.png" alt="">
+                                        <p>노테 Notte</p>
+                                    </a>
+                                </div>
+                          </div><!-- //designer_slide -->
+
+                        </div>
+                        <div class="btn_area next"></div>
+                        <div class="btn_area prev"></div>
+                    </div>
+                </div>
+            </div><!-- //designer_pick -->
+
+            <div class="banner_cont">
+                <span class="blind">영림 디자인 홍보영역</span>
+                <div class="wrap">
+                    <img src="images/main-img-brand.jpg" alt="">
+
+                    <div class="txt_box" id="transform">
+                        <h3 id="font_size">시간이 흘러도 변하지 않는 가치</h3>
+                        <p id="font_size_p">
+                            시간이 흐름에도 지속되는 삶의 가치를 담아 행복한 일상을 만들기 위해 
+                        <br>
+                            영림의 디자이너들은 끊임없이 고민하고 연구합니다.
+                        </p>
+
+                        <div class="more_btn" id="more_btn_id">
+                            <a href="">더 보러가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //banner_cont -->
+
+            <div class="magazie_area">
+                <span class="blind">매거진 영역</span>
+                <div class="inner">
+                    <div class="top_box">
+                        <h3>매거진.Y</h3>
+                        <a href="">MORE</a>
+                    </div>
+
+                    <ul>
+                        <li class="magazie_cont">
+                            <a href="">
+                                <img src="images/magazie1.jpg" alt="">
+                                <div class="txt_con">
+                                    <p>
+                                        <span>TV CF 속 그 공간, 그 제품 </span>
+                                        2021 영림의 다양한 신제품들을 담은 현장 속 인테리어 살펴보기
+                                    </p>
+                                </div>
+                            </a>
+                        </li><!-- //magazie_cont -->
+                        <li class="magazie_cont">
+                            <a href="">
+                                <img src="images/magazie2.jpg" alt="">
+                                <div class="txt_con">
+                                    <p>
+                                        <span>새로운 꿈을 꾸며 내일을 설계하는 집</span>
+                                        눈이 펑펑 오던 어느 겨울, 고요하게 눈이 쌓인 전원주택 마을을 방문했다
+                                    </p>
+                                </div>
+                            </a>
+                        </li><!-- //magazie_cont -->
+                        <li class="magazie_cont">
+                            <a href="">
+                                <img src="images/magazie3.jpg" alt="">
+                                <div class="txt_con">
+                                    <p>
+                                        <span>2021 영림 TV CF 광고 촬영 비하인드</span>
+                                        토탈인테리어 브랜드 ‘영림’의 첫 TV CF 촬영 비하인드 스토리, 지금 공개합니다.
+                                    </p>
+                                </div>
+                            </a>
+                        </li><!-- //magazie_cont -->
+                    </ul>
+                </div>
+            </div><!-- //magazie_area -->
+
+            <div class="consulting_area">
+                <span class="blind">컨설팅 영역</span>
+
+                <div class="inner">
+                    <div class="text_box">
+                        <p>
+                            지금 영림에 문의 하세요. 전문 컨설팅을 통해 당신의 <br>
+                            라이프스타일에 딱 맞는 인테리어를 제안해 드립니다.
+                        </p>
+                        <span>Contact Us</span>
+                    </div>
+
+                    <div class="img_box">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="images/younglim_cs_illust_01_55.jpg" alt="">
+                                    <div class="txt_con">
+                                        <p class="top">리모델링 상담 신청하기</p>
+                                        <p class="bottom">
+                                            <span class="icon">Concierge Service</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <img src="images/younglim_cs_illust_02_47.jpg" alt="">
+                                    <div class="txt_con">
+                                        <p class="top">온라인 쇼룸 둘러보기</p>
+                                        <p class="bottom">
+                                            <span class="icon">Online Showroom</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <img src="images/younglim_cs_illust_03_41.jpg" alt="">
+                                    <div class="txt_con">
+                                        <p class="top">실시간 채팅 상담하기</p>
+                                        <p class="bottom">
+                                            <span class="icon">Online Chatting</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- //img_box -->
+                </div><!-- //inner -->
+            </div><!-- //consulting_area -->
+
+            <div class="content_area">
+                <div class="inner">
+                    <div class="cont_item">
+                        <div class="img_box strat">
+                            <img src="images/main-img-banner-01.jpg" alt="">
+                        </div>
+                        <div class="txt_box" id="content_txt1">
+                            <h3>인테리어 시작하기</h3>
+                            <p>
+                                인테리어 어디서부터 시작해야 할지 막막하시죠?<br>
+                                자재 선택부터 시공 방법까지 하나하나 알려드릴게요.
+                            </p>
+                            <div class="more_btn">
+                                <span class="blind">더보기</span>
+                                <a href="">인테리어 시작</a>
+                            </div>
+                        </div>
+                    </div><!-- //cont_item -->
+
+                    <div class="cont_item">
+                        <div class="img_box check">
+                            <img src="images/main-img-banner-02.jpg" alt="">
+                        </div>
+                        <div class="txt_box" id="content_txt2">
+                            <h3>영림 정품 확인하기</h3>
+                            <p>
+                                품질에 대한 자부심을 담은 <br>
+                                제품에는 정품 마크가 표기되어 있습니다.<br>
+                                영림의 철학과 가치를 나타내는 정품 마크를 확인해보세요.
+                            </p>
+                            <div class="more_btn">
+                                <span class="blind">더보기</span>
+                                <a href="">영림 브랜드 아이덴티티</a>
+                            </div>
+                        </div>
+                    </div><!-- //cont_item -->
+                </div>
+            </div><!-- //content_area -->
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <div class="inner">
+
+                    <div class="footer_top">
+                        <div class="footer_logo">
+                            <h1>영림 토탈 인테리어</h1>
+                        </div>
+
+                        <div class="footer_menu">
+                            <ul class="footer_list">
+                                <li>
+                                    <a href="">브랜드</a>
+                                </li>
+                                <li>
+                                    <a href="">제품</a>
+                                </li>
+                                <li>
+                                    <a href="">인테리어 솔루션</a>
+                                </li>
+                                <li>
+                                    <a href="">매거진.Y</a>
+                                </li>
+                                <li>
+                                    <a href="">쇼룸 안내</a>
+                                </li>
+                            </ul><!-- //footer_list -->
+                            <ul class="footer_list">
+                                <li>
+                                    <a href="">대리점 개설문의</a>
+                                </li>
+                                <li>
+                                    <a href="">고객센터</a>
+                                </li>
+                                <li>
+                                    <a href="">A/S 접수</a>
+                                </li>
+                                <li>
+                                    <a href="">이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="">개인정보 처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="">회사소개</a>
+                                </li>
+                            </ul><!-- //footer_list -->
+                            <ul class="footer_list arrow_list">
+                                <li>
+                                    <a href="" class="arrow">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="" class="arrow">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="" class="arrow">YouTube</a>
+                                </li>
+                                <li>
+                                    <a href="" class="arrow">영림몰</a>
+                                </li>
+                                <li>
+                                    <a href="" class="arrow">e카탈로그</a>
+                                </li>
+                            </ul>
+                        </div><!-- //footer_menu -->
+                    </div><!-- //footer_top -->
+
+                    <div class="footer_corporate">
+                        <div class="corporate_item">
+                            <p class="bold">영림임업(주)</p>
+
+                            <p>인천광역시 남동구 호구포로 9</p>
+                            <p>대표. 김장원 <span class="line"></span> 사업자 등록번호. 137-81-02411</p>
+                            <p>Tel. 1577-5600 <span class="line"></span> Fax. 032-813-5505</p>
+                        </div><!-- //corporate_item -->
+
+                        <div class="corporate_item">
+                            <p class="bold">영림화학(주)</p>
+
+                            <p>인천광역시 남동구 호구포로 9</p>
+                            <p>대표. 김장원 <span class="line"></span> 사업자 등록번호. 137-81-02411</p>
+                            <p>Tel. 1577-5600 <span class="line"></span> Fax. 032-813-5505</p>
+                        </div><!-- //corporate_item -->
+
+                        <div class="corporate_item">
+                            <p class="bold">영영림산업(주)</p>
+                            
+                            <p>인천광역시 남동구 호구포로 9</p>
+                            <p>대표. 김장원 <span class="line"></span> 사업자 등록번호. 137-81-02411</p>
+                            <p>Tel. 1577-5600 <span class="line"></span> Fax. 032-813-5505</p>
+                        </div><!-- //corporate_item -->
+                    </div><!-- //footer_corporate -->
+                </div><!-- //inner -->
+            </div>
+            <div class="footer_bottom">
+                <div class="inner">
+                    <div class="footer_copy">
+                        <p>Younglim</p>
+                    </div>
+                    <div class="footer_number">
+                        <p>
+                            고객센터<span>1577 - 5600</span>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- //footer_bottom -->
+        </footer>
+</body>
+</html>
