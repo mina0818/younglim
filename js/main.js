@@ -221,7 +221,7 @@ $(function(){
         e.preventDefault();
         // console.log("click")
 
-        sh = $(".srh_area").outerHeight()
+        sh = $(".srh_inner").outerHeight()
         console.log(sh)
 
         if($(".srh_area").height() > 0){
