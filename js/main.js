@@ -177,7 +177,9 @@ $(function(){
         //나와야하는 매뉴 visible_con가 3개인데 active먼저 뺏다가  idx로 마우스 올린 순서대로 active준다
     })
 
-
+    $(".header_con").mouseover(function(){
+        $("header").addClass("white")
+    })
 
 
    /*  $(".items_con .gnb_menu_list").mouseover(function(){
